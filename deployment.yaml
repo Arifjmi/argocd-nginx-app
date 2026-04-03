@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: 380875918348.dkr.ecr.ap-south-1.amazonaws.com/argocd-ecr-app
         ports:
         - containerPort: 80
 
