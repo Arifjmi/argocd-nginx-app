@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: nginx-app
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 380875918348.dkr.ecr.ap-south-1.amazonaws.com/argocd-ecr-app:latest
+        image: nginx:latest
         ports:
         - containerPort: 80
 
